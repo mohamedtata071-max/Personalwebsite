@@ -94,13 +94,13 @@ html.js .rv.in{opacity:1;transform:none}
 .hero .hello::before{content:"";width:22px;height:2px;background:var(--acc)}
 .hero .lede{color:var(--grey);font-size:clamp(16px,1.15vw,17.5px);line-height:1.5;margin:12px auto 0;max-width:34em;text-wrap:pretty}
 .stage{position:relative;display:grid;grid-template-columns:minmax(0,460px);justify-content:center;margin-top:clamp(18px,3vw,34px)}
-.blob{position:relative;height:clamp(300px,34vw,420px);display:flex;align-items:flex-end;justify-content:center;overflow:visible}
-.blob::before{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(86%,400px);height:100%;border-radius:50% 50% 0 0 / 46% 46% 0 0;background:var(--acc);
+.blob{--arch:min(86%,400px);position:relative;height:clamp(300px,34vw,420px);display:flex;align-items:flex-end;justify-content:center;overflow:visible}
+.blob::before{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:var(--arch);height:100%;border-radius:50% 50% 0 0 / 46% 46% 0 0;background:var(--acc);
   background-image:radial-gradient(circle at 30% 30%,rgba(255,255,255,.18),transparent 45%)}
-.blob img{position:relative;height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom center}
+.blob img{position:relative;width:calc(var(--arch) * 1.12);height:auto;max-width:none;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 16px 30px rgba(0,0,0,.16))}
 .blob.noimg img{display:none}
 .blob.noimg::after{content:"MS";position:absolute;left:50%;bottom:22%;transform:translateX(-50%);font-size:clamp(64px,9vw,120px);font-weight:800;letter-spacing:-.05em;color:rgba(255,255,255,.85)}
-@media(max-width:700px){.blob{height:clamp(300px,72vw,360px)}.blob::before{width:min(84%,340px)}}
+@media(max-width:700px){.blob{height:clamp(300px,72vw,360px);--arch:min(84%,330px)}}
 .blob .ctas{position:absolute;left:50%;bottom:-24px;transform:translateX(-50%);display:flex;gap:8px;background:#fff;border-radius:999px;padding:6px;border:1px solid var(--hair);box-shadow:0 14px 34px -18px rgba(0,0,0,.35);white-space:nowrap;z-index:2}}
 @media(max-width:960px){
   .stage{grid-template-columns:1fr;min-height:0}
@@ -157,7 +157,7 @@ html.js .rv.in{opacity:1;transform:none}
 .facts b{font-weight:500;font-size:15px;line-height:1.45;color:var(--ink)}
 .pblob{position:relative;border-radius:var(--r);background:var(--acc);aspect-ratio:1/1.05;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;
   background-image:radial-gradient(circle at 25% 20%,rgba(255,255,255,.22),transparent 50%)}
-.pblob img{height:94%;width:auto;object-fit:contain}
+.pblob img{height:100%;width:auto;object-fit:contain;object-position:bottom center}
 .pblob.noimg img{display:none}
 .pblob.noimg::after{content:"MS";position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(80px,12vw,150px);font-weight:800;letter-spacing:-.05em;color:rgba(255,255,255,.85)}
 .pblob .badge{position:absolute;left:14px;top:14px;background:#fff;border-radius:16px;padding:12px 14px;text-align:center;box-shadow:0 10px 24px -14px rgba(0,0,0,.4)}

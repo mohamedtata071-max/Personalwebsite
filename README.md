@@ -12,7 +12,7 @@ A single-page site. No build step, no framework, no dependencies to install. One
 | `robots.txt` | Lets search engines index the site. |
 | `sitemap.xml` | One URL, for Google. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are. |
-| `portrait.png` | **Not included. You need to add this.** See below. |
+| `portrait.png` | Your cut-out photo, already prepared and in place. |
 
 ## Publishing on GitHub Pages
 
@@ -24,13 +24,11 @@ A single-page site. No build step, no framework, no dependencies to install. One
 
 To update anything later, upload the changed file again and Pages redeploys on its own.
 
-## Adding your photo
+## Replacing the photo
 
-The hero shows a placeholder until you add a portrait.
+`portrait.png` is already done: cut out from your photo, background removed, edge softened, colour graded to match the site, 820px wide.
 
-Save it as **`portrait.png`** in the same folder as `index.html`. It should be a cut-out with a transparent background, shoulders up, facing roughly forward. The site drops it into the orange arch automatically. If the file is missing the placeholder shows instead, so nothing breaks either way.
-
-If your photo has a normal background rather than a transparent one, use `remove.bg` or Photoshop first. A rectangular photo will look wrong in the arch.
+To swap it for a different one, save the new file as `portrait.png` in the same folder. It must have a transparent background, or the arch will show a rectangle. Use `remove.bg` if you need to cut one out. If the file is missing the site falls back to the "MS" placeholder, so nothing breaks.
 
 ## Using your own domain
 
