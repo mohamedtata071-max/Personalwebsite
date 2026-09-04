@@ -12,7 +12,6 @@ A single-page site. No build step, no framework, no dependencies to install. One
 | `robots.txt` | Lets search engines index the site. |
 | `sitemap.xml` | One URL, for Google. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are. |
-| `portrait.png` | Your cut-out photo, already prepared and in place. |
 
 ## Publishing on GitHub Pages
 
@@ -23,12 +22,6 @@ A single-page site. No build step, no framework, no dependencies to install. One
 5. Wait a minute or two, then open the address GitHub shows at the top of that page.
 
 To update anything later, upload the changed file again and Pages redeploys on its own.
-
-## Replacing the photo
-
-`portrait.png` is already done: cut out from your photo, background removed, edge softened, colour graded to match the site, 820px wide.
-
-To swap it for a different one, save the new file as `portrait.png` in the same folder. It must have a transparent background, or the arch will show a rectangle. Use `remove.bg` if you need to cut one out. If the file is missing the site falls back to the "MS" placeholder, so nothing breaks.
 
 ## Using your own domain
 
