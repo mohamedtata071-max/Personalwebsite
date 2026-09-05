@@ -6,12 +6,16 @@ A single-page site. No build step, no framework, no dependencies to install. One
 
 | File | What it is |
 |---|---|
-| `index.html` | The whole website. All CSS and JavaScript are inside it. |
-| `Mohamed-Selim-CV.pdf` | The CV the Download CV buttons link to. Do not rename it. |
-| `Mohamed-Selim-CV.docx` | The editable CV. Not used by the site; kept here so both versions live together. |
-| `robots.txt` | Lets search engines index the site. |
-| `sitemap.xml` | One URL, for Google. |
-| `.nojekyll` | Tells GitHub Pages to serve the files as they are. |
+| `index.html` | Home: intro, about, career story |
+| `experience.html` | Expertise, work experience, education |
+| `projects.html` | The tools you have built |
+| `opportunities.html` | Current industrial opportunities and an enquiry form |
+| `contact.html` | WhatsApp, email, phone, LinkedIn, message form |
+| `Mohamed-Selim-CV.pdf` | The CV the Download CV links point to. Do not rename it. |
+| `Mohamed-Selim-CV.docx` | The editable CV |
+| `logo.png`, `favicon.png` | Your signature mark, used in the header and as the browser icon |
+| `robots.txt`, `sitemap.xml` | For search engines |
+| `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 
 ## Publishing on GitHub Pages
 
@@ -29,6 +33,20 @@ To update anything later, upload the changed file again and Pages redeploys on i
 2. At your domain registrar, add the DNS records GitHub shows on that page.
 3. Tick **Enforce HTTPS** once it becomes available, usually within the hour.
 4. Then open `index.html` and replace `https://mohamedselim.com/` with your real address in three places: the `canonical` link, the `og:url` tag, and `sitemap.xml`. This only affects search engines and link previews, not whether the site works.
+
+## The opportunities page
+
+The eight parks are real, taken from your own Elsewedy work and cross-checked against elsewedydevelopment.com: October, East, SOKHNA360, Sokhna, Asher, New Sadat, Borg El Arab, and Industria West marked sold out.
+
+No prices, plot sizes or payment terms are published, deliberately. Those change, they vary by client, and they are the company's to quote, not a personal site's. The page says you quote them per enquiry.
+
+If a park sells out or a new one opens, edit the `<article class="opp">` blocks in `opportunities.html` and the matching `<option>` in the enquiry form.
+
+## How the forms work
+
+There is no server behind this site, so the two forms build an email from what the visitor types and open it in their mail app addressed to you. Nothing is stored anywhere and there is no third-party service involved.
+
+If you would rather receive submissions without the visitor's mail app opening, sign up at **formspree.io** (free tier), then in `contact.html` and `opportunities.html` change `<form class="form rv" data-mail ...>` to `<form class="form rv" action="https://formspree.io/f/YOURID" method="POST">` and remove the `data-mail` attribute.
 
 ## Editing the text
 
